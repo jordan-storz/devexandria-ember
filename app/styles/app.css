@@ -5,6 +5,8 @@
 body {
   height: 100vh;
   max-height: 100vh;
+  background: linear-gradient(to right, #232526, #414345);
+  font-family: 'Open Sans', sans-serif;
 }
 
 body > div {
@@ -35,6 +37,7 @@ input.devex-large {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  width: 51rem;
 }
 
 .tags-list li {
@@ -50,15 +53,22 @@ input.devex-large {
 
 header.index-view {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 0.5rem;
-  background: grey;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1rem;
   height: 18rem;
 }
 
 header.index-view h1 {
-  font-size: 4rem;
+  font-size: 9rem;
+  margin: 0;
+  font-family: 'Tangerine', cursive;
+  color: #FEC343;
+}
+
+header.index-view h2 {
+  color: #efefef;
 }
 
 footer.index-view {
@@ -68,4 +78,5 @@ footer.index-view {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #efefef;
 }
