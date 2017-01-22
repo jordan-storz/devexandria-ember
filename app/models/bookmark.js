@@ -5,5 +5,6 @@ export default DS.Model.extend({
   domain: DS.attr('string'),
   language: DS.attr('string'),
   title: DS.attr('string'),
-  date: DS.attr('date')
+  date: DS.attr('date'),
+  description: DS.attr('string')
 });
