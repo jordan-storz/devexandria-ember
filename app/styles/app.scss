@@ -8,6 +8,18 @@
   justify-content: center
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  max-height: 100vh;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -25,9 +37,11 @@ main {
   flex-grow: 2;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 header {
+  padding-top: 2rem;
   font-family: 'Tangerine', cursive;
   text-align: center;
   h1 {
@@ -39,15 +53,23 @@ footer {
   text-align: center;
 }
 
+// route templates
 div.view {
 
-  height: 100%;
-  width: 100%;
+  @include dimensions(100%);
 
   &#bookmarks {
+    padding-top: 6rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 80%;
+    h2 {
+      margin-bottom: 2rem;
+      text-decoration: underline;
+
+    }
   }
 
   &#bookmark {
@@ -55,5 +77,48 @@ div.view {
     @include flexWithCenter();
   }
 
+  &#tags {
+    padding-top: 6rem;
+    @include flexWithCenter();
+  }
 
+  &#tag {
+    padding-top: 6rem;
+    @include flexWithCenter();
+    h2 {
+      font-size: 6rem;
+      font-weight: 400;
+      padding-top: 6rem;
+      border: 1px solid gold;
+      display: block;
+      font-family: 'Tangerine', cursive;
+      padding-top: 0;
+      padding: 0.4rem 2rem;
+    }
+  }
+
+
+}
+
+// Components
+.tags-list {
+  @include flexWithCenter;
+  align-items: flex-start;
+  flex-flow: wrap;
+  width: 80%;
+  padding-left: 0;
+}
+
+.tag-tag {
+  list-style-type: none;
+  display: block;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border: 0.3px solid gold;
+  height: 2.3rem;
+  padding: 0.5rem;
+}
+
+.bookmark-bookmark {
+  margin-bottom: 2rem;
 }

@@ -1,3 +1,5 @@
-{{bookmark.title}}
+{{#link-to "bookmark" bookmark}}
+  <p class="title">{{bookmark.title}}</p>
+  <p class="body">{{bookmark.description}}</p>
+{{/link-to}}
 <a href="{{bookmark.url}}">Go to URL</a>
-{{bookmark.description}}

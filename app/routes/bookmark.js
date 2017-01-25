@@ -6,4 +6,5 @@ export default Ember.Route.extend({
       bookmark: this.get('store').find('bookmark', params.bookmark_id)
     })
   }
+
 });
